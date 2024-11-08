@@ -1,18 +1,19 @@
 import { BrowserRouter as Router, Route, Routes ,Link } from "react-router-dom";
 import React, { useEffect, useState } from "react"
-import Login from "./Components/Login"
-import Navbar from "./Components/Navbar";
+import CardDetail from "./Components/CardDetail";
 import Home from "./Components/Home";
+import Login from "./Components/Login";
+import About from "./Components/Abaut";
 import Users from "./Components/Users";
-import MalumotlarSorash from "./MalumotSo'rash";
-import Elonlar from "./Components/Elonlar";
-import Hisob from "./Components/Hisob";
 import Buyurtmalar from "./Components/Buyurtmalar";
 import BerilganBuyurtmalar from "./Components/BerilganBuyurtmalar";
-import Card from "./Components/Card";
-import CardDetail from "./Components/CardDetail";
+import MalumotlarSorash from "./MalumotSo'rash";
+import Hisob from "./Components/Hisob";
+import Elonlar from "./Components/Elonlar";
+import Navbar from "./Components/Navbar";
 import Messenger from "./Components/messenger";
-import About from "./Components/Abaut";
+import Card from "./Components/card";
+
 
 function App() {
 
