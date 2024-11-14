@@ -32,6 +32,16 @@ function Home({ loggedInUser }) {
   const [categoriesVisible, setCategoriesVisible] = useState(true);
 
   useEffect(() => {
+    // localStorage dan 'hasVisited' ni tekshirish
+    const hasVisited = localStorage.getItem('hasVited');
+
+    if (!hasVisited) {
+        alert("Bu web siteda backdan malumot kelelishi 10-15s tashkil qilishi mumkun bu faqat 1chi kirishda boladi va responsivesi toliq emas");
+        // 'hasVisited' ni localStorage ga qo'shish
+        localStorage.setItem('hasVited', 'true');
+    }
+}, []); 
+  useEffect(() => {
     if (!searchQuery) {
       setSearchResults([]);
       setCategoriesVisible(true);
@@ -95,7 +105,7 @@ function Home({ loggedInUser }) {
               className="text-2xl font-semibold text-orange-600 hover:text-orange-800 transition-colors flex flex-col items-center gap-4"
             >
               <div className="w-36 h-36 sm:w-52 sm:h-52 rounded-full bg-orange-300 p-8 sm:p-12">
-                <img src="https://www.pngall.com/wp-content/uploads/5/Cake-PNG-Free-Download.png" alt="Tortlar" />
+                <img src="https://cdn-icons-png.flaticon.com/512/3990/3990560.png" alt="Tortlar" />
               </div>
               {t('To\'rtlar')}
             </Link>
